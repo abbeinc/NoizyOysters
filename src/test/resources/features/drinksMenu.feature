@@ -1,4 +1,4 @@
-@single
+
 Feature: User should be able to see drinks menu
 
   Background:

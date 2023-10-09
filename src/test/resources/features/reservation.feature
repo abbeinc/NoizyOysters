@@ -1,4 +1,4 @@
-@regression
+
 Feature: User should be able to fill and submit reservation form
 
   Background:

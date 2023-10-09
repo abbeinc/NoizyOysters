@@ -40,6 +40,11 @@ public class MainPage {
     @FindBy(xpath = "//div[@class='elementskit-info-box-title'][contains(.,'Our Location')]")
     public WebElement ourLocation;
 
+    @FindBy(xpath = "//div[@class='insta-follow-btn-area']/a[contains(.,'Follow On Instagram')]")
+    public WebElement followOnInstagram;
+
+    @FindBy(xpath = "//div[@class='insta-follow-btn-area']/a[contains(.,'Follow and Subscribe on YouTube')]")
+    public WebElement followAndSubscribeOnYouTube;
 
 
 

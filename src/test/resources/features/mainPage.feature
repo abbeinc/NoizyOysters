@@ -33,3 +33,10 @@ Feature: User at the main page should be able to see content and
       | Check our Bar |
       | Our Location  |
 
+  Scenario: User should be able to click on button Follow On Instagram and check Instagram page
+    When user click on Follow on Instagram button
+    Then user should see Instagram page
+  @single
+  Scenario: User should be able to click on button Follow and Subscribe on YouTube
+    When user click on Follow and Subscribe on YouTube
+    Then user should see YouTube page

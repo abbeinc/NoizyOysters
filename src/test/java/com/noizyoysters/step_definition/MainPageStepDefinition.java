@@ -6,12 +6,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class MainPageStepDefinition {
 
@@ -111,6 +113,60 @@ MainPage mainPage = new MainPage();
         System.out.println(actual.add(mainPage.ourLocation.getText().trim()));
 
         Assert.assertEquals(lst, actual);
+
+    }
+
+    @When("user click on Follow on Instagram button")
+    public void userClickOnFollowOnInstagramButton() {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window,scrollBy(0,4500)");
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofMillis(5000));
+        wait.until(ExpectedConditions.visibilityOf(mainPage.followOnInstagram));
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(mainPage.followOnInstagram).click().perform();
+    }
+
+    @Then("user should see Instagram page")
+    public void userShouldSeeInstagramPage() {
+        String instagramTitle = "Noizy Oysters | Myrtle Beach, South Carolina | Instagram photos and videos";
+        Set<String> windHandls = Driver.getDriver().getWindowHandles();
+        for (String each : windHandls) {
+            if(Driver.getDriver().switchTo().window(each).getTitle().equals(instagramTitle)){
+                Assert.assertEquals(instagramTitle, Driver.getDriver().getTitle());
+            }
+
+
+
+        }
+
+
+
+
+    }
+
+    @When("user click on Follow and Subscribe on YouTube")
+    public void userClickOnFollowAndSubscribeOnYouTube() {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window,scrollBy(0,4700)");
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofMillis(5000));
+        wait.until(ExpectedConditions.visibilityOf(mainPage.followAndSubscribeOnYouTube));
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(mainPage.followAndSubscribeOnYouTube).click().perform();
+
+    }
+
+    @Then("user should see YouTube page")
+    public void userShouldSeeYouTubePage() {
+
+        String youTubeTitle = "Noizy Oysters - YouTube";
+        Set<String> st = Driver.getDriver().getWindowHandles();
+        for (String eachHandle : st) {
+
+            if(Driver.getDriver().switchTo().window(eachHandle).getTitle().equals(youTubeTitle)){
+                Assert.assertEquals(youTubeTitle, Driver.getDriver().getTitle());
+            }
+        }
+
 
     }
 }
