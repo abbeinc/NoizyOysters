@@ -1,4 +1,4 @@
-@single
+
 Feature: As a user I should be able to see page location
   use its feature
   Background:
