@@ -33,7 +33,7 @@ import org.junit.runner.RunWith;
 
 
                 ,tags="@single"
-      //  tags="@bla"
+        //,tags="@regression"
               //,tags="@salad and @smoke"  //don't forget add next to each other this tags
                 // ,tags="@salad or @smoke"
                // ,tags = "@calculator" // will run everything what is not @ui

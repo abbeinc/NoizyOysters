@@ -7,6 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -108,6 +109,8 @@ public class ReservationStepDef {
         reservationPage.name.sendKeys(faker.name().fullName());
         reservationPage.email.sendKeys(faker.animal().name()+"@gmail.com");
         reservationPage.phone.sendKeys(faker.phoneNumber().cellPhone());
+        JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
+        js.executeScript("window.scrollBy(0,400)");
         Select select = new Select(reservationPage.howManyPeople);
         select.selectByVisibleText(amount);
         reservationPage.dateTime.click();
