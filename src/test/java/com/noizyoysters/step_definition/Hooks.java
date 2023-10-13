@@ -15,7 +15,7 @@ public class Hooks {
     //or even when we learn tags
     // we can run certain code before and after each scenario tha tagged with certain tag
 
-@Before("@single") // it comes from import io.cucumber.java.Before; // (Make sure it is correct import)
+@Before("@regression") // it comes from import io.cucumber.java.Before; // (Make sure it is correct import)
 //By using tag in front of @Before and @After you
 // let it run only for classes with the Tag"@ui"
 
@@ -25,7 +25,7 @@ public void setupDriver(){
     Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     Driver.getDriver().manage().window().maximize();
     }
-@After("@single") //it comes from import io.cucumber.java.After; (Make sure it is correct import)
+@After("@regression") //it comes from import io.cucumber.java.After; (Make sure it is correct import)
 public void tearDown(Scenario scenario){
     // check if scenario failed or not
     if(scenario.isFailed()){
