@@ -21,8 +21,10 @@ public class LocationStepDef {
 
     MainPage mainPage = new MainPage();
     LocationPage locationPage = new LocationPage();
-
     ReservationPage reservationPage = new ReservationPage();
+    JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+    WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofMillis(5000));
+    Actions actions = new Actions(Driver.getDriver());
     @Given("user at the location page")
     public void user_at_the_location_page() {
      MainPage.goToMainPage();
@@ -82,23 +84,18 @@ public class LocationStepDef {
 
     @When("user at the location page click ONLINE BOOKING")
     public void userAtTheLocationPageClickONLINEBOOKING() {
-
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        actions.pause(2000).perform();
         js.executeScript("window.scrollBy(0, 2100)");
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofMillis(5000));
         wait.until(ExpectedConditions.elementToBeClickable(locationPage.onlineBooking));
-        Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(locationPage.onlineBooking).click().perform();
 
     }
 
     @Then("user should see reservation page")
-    public void userShouldSeeReservationPage() throws InterruptedException {
-
-        Thread.sleep(1000);
-        String resrevationPageTitle = Driver.getDriver().getTitle();
+    public void userShouldSeeReservationPage()  {
         String expectedTitle = "Online Reservation – Noizy Oysters Bar & Grill";
-
+        wait.until(ExpectedConditions.titleIs(expectedTitle));
+        String resrevationPageTitle = Driver.getDriver().getTitle();
         Assert.assertEquals(expectedTitle, resrevationPageTitle);
     }
 }

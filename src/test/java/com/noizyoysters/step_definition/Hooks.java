@@ -7,22 +7,18 @@ import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class Hooks {
-    // We can set up a hook class that contains
-    // methods that run before each scenario and after each scenario
-    //or even when we learn tags
-    // we can run certain code before and after each scenario tha tagged with certain tag
 
-@Before("@regression") // it comes from import io.cucumber.java.Before; // (Make sure it is correct import)
-//By using tag in front of @Before and @After you
-// let it run only for classes with the Tag"@ui"
+
+@Before("@regression")
 
 public void setupDriver(){
     System.out.println("THIS IS FROM @Before inside hooks class");
     // set up implicit wait
-    Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
     Driver.getDriver().manage().window().maximize();
     }
 @After("@regression") //it comes from import io.cucumber.java.After; (Make sure it is correct import)

@@ -22,6 +22,9 @@ public class MenuStepDef {
 MenuPageNoizyStarters menuPage = new MenuPageNoizyStarters();
 MenuPageFlatbreads menuPageFlatbreads = new MenuPageFlatbreads();
 MenuPageSidesAndSoups menuPageSidesAndSoups = new MenuPageSidesAndSoups();
+JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofMillis(5000));
+
     @Given("user at the menu page")
     public void user_at_the_menu_page() {
         MenuPageNoizyStarters.goToMenu();
@@ -46,7 +49,6 @@ MenuPageSidesAndSoups menuPageSidesAndSoups = new MenuPageSidesAndSoups();
     butterflyShrimpPrice = butterflyShrimpPrice.substring(butterflyShrimpPrice.indexOf("$"));
     String noizyCragCakesPrice = menuPage.noizyCrabCakesPrice.getText();
     noizyCragCakesPrice = noizyCragCakesPrice.substring(noizyCragCakesPrice.indexOf("$"));
-
     actualMap.put(menuPage.shrimpCoctail.getText(), shrimpCoctailPrice);
     actualMap.put(menuPage.goldenFriedCalamari.getText(), goldenFriedCalamariPrice);
     actualMap.put(menuPage.ahiTuna.getText(), ahiTunaPrice);
@@ -63,22 +65,16 @@ MenuPageSidesAndSoups menuPageSidesAndSoups = new MenuPageSidesAndSoups();
     @When("user see section Flatbreads")
     public void userSeeSectionFlatbreads() {
 
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("window.scrollBy(0,1200)");
-
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofMillis(5000));
-
         wait.until(ExpectedConditions.visibilityOfAllElements(menuPageFlatbreads.veggieFlatbread));
-
-
         Assert.assertEquals("FLATBREADS", menuPageFlatbreads.flatbreads.getText());
 
     }
 
 
     @Then("menu Flatbreads contains following")
-    public void menuFlatbreadsContainsFollowing(Map<String,String> mp) throws InterruptedException {
-        Thread.sleep(5000);
+    public void menuFlatbreadsContainsFollowing(Map<String,String> mp) {
+
     Map<String, String> actualMap = new HashMap<>();
 
     String veggieFlatbreadPrice = menuPageFlatbreads.veggieFlatbreadPrice.getText();
@@ -105,7 +101,7 @@ actualMap.put(menuPageFlatbreads.chickenCapreseFlatbread.getText(),chickenCapres
 
     @When("user see Sides and Soup menu")
     public void userSeeSidesAndSoupMenu() throws InterruptedException {
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+
         js.executeScript("window.scrollBy(0,3000)");
 
 

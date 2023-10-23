@@ -20,6 +20,11 @@ public class ReservationStepDef {
     ReservationPage reservationPage = new ReservationPage();
     Faker faker = new Faker();
     String quantity;
+    Actions actions = new Actions(Driver.getDriver());
+    JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
+    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofMillis(4000));
+
+
     @Given("user at the online-reservation page")
     public void user_at_the_online_reservation_page() {
        ReservationPage.goToReservationPage();
@@ -35,7 +40,7 @@ public class ReservationStepDef {
         reservationPage.dateTime.click();
         reservationPage.choosingDateTime.click();
 
-        Thread.sleep(5000);
+
     }
     @Then("user will see reservation approved page")
     public void user_will_see_reservation_approved_page() {
@@ -83,22 +88,18 @@ public class ReservationStepDef {
         reservationPage.name.sendKeys(faker.name().fullName());
         reservationPage.email.sendKeys(faker.animal().name()+"@gmail.com");
         reservationPage.phone.click();
-        Actions actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN).pause(Duration.ofMillis(2000)).perform();
-
         Select select = new Select(reservationPage.howManyPeople);
         select.selectByVisibleText("2");
         Assert.assertEquals("2", select.getFirstSelectedOption().getText());
         reservationPage.dateTime.click();
         reservationPage.choosingDateTime.click();
         reservationPage.submitButton.click();
-
-
     }
 
     @Then("user should see warning sing for phone")
     public void userShouldSeeWarningSingForPhone() {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofMillis(4000));
+
         wait.until(ExpectedConditions.visibilityOf(reservationPage.noNameWarning));
         Assert.assertEquals("Please fill out this field.", reservationPage.noPhoneWarning.getText());
 
@@ -109,17 +110,13 @@ public class ReservationStepDef {
         reservationPage.name.sendKeys(faker.name().fullName());
         reservationPage.email.sendKeys(faker.animal().name()+"@gmail.com");
         reservationPage.phone.sendKeys(faker.phoneNumber().cellPhone());
-        JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
-        js.executeScript("window.scrollBy(0,400)");
+                js.executeScript("window.scrollBy(0,400)");
         Select select = new Select(reservationPage.howManyPeople);
         select.selectByVisibleText(amount);
         reservationPage.dateTime.click();
         reservationPage.choosingDateTime.click();
         quantity = select.getFirstSelectedOption().getText();
-
     }
-
-
 
     @Then("user should see correct quantity on the screen")
     public void userShouldSeeCorrectQuantityOnTheScreen() {

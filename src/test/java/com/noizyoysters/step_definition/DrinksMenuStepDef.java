@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class DrinksMenuStepDef {
     DrinksMenuPage drinksMenuPage = new DrinksMenuPage();
-
+    JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
     @Given("user at the drinks menu page")
     public void user_at_the_drinks_menu_page() {
         DrinksMenuPage.goToDrinksMenuPage();
@@ -22,7 +22,7 @@ public class DrinksMenuStepDef {
     }
     @When("user scroll down to the Noizy Favorites")
     public void user_scroll_down_to_the_noizy_favorites() {
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+
         js.executeScript("window.scrollBy(0,200)");
     }
     @Then("user should see")

@@ -18,7 +18,9 @@ import java.util.Set;
 public class MainPageStepDefinition {
 
 MainPage mainPage = new MainPage();
-
+JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
+    Actions actions = new Actions(Driver.getDriver());
+    WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofMillis(5000));
 
     @Given("user at the main page")
     public void user_at_the_main_page() {
@@ -84,7 +86,7 @@ MainPage mainPage = new MainPage();
 
     @When("user goes down on the main page")
     public void userGoesDownOnTheMainPage() {
-        JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
+
         js.executeScript("window.scrollBy(0,1200)");
 
     }
@@ -97,32 +99,26 @@ MainPage mainPage = new MainPage();
     @When("user scroll main page down")
     public void userScrollMainPageDown()  {
 
-        JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
         js.executeScript("window.scrollBy(0,2200)");
-
     }
 
     @Then("user must see three links")
     public void userMustSeeThreeLinks(List<String> lst) {
-    List<String> actual = new ArrayList<>();
+        List<String> actual = new ArrayList<>();
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofMillis(5000));
         wait.until(ExpectedConditions.visibilityOf(mainPage.ourLocation));
-
-        System.out.println(actual.add(mainPage.seeOurMenu.getText().trim()));
-        System.out.println(actual.add(mainPage.checkOurBar.getText().trim()));
-        System.out.println(actual.add(mainPage.ourLocation.getText().trim()));
-
+        actual.add(mainPage.seeOurMenu.getText().trim());
+        actual.add(mainPage.checkOurBar.getText().trim());
+        actual.add(mainPage.ourLocation.getText().trim());
         Assert.assertEquals(lst, actual);
 
     }
 
     @When("user click on Follow on Instagram button")
     public void userClickOnFollowOnInstagramButton() {
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+
         js.executeScript("window,scrollBy(0,4500)");
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofMillis(5000));
         wait.until(ExpectedConditions.visibilityOf(mainPage.followOnInstagram));
-        Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(mainPage.followOnInstagram).click().perform();
     }
 
@@ -146,18 +142,15 @@ MainPage mainPage = new MainPage();
 
     @When("user click on Follow and Subscribe on YouTube")
     public void userClickOnFollowAndSubscribeOnYouTube() {
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("window,scrollBy(0,4700)");
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofMillis(5000));
         wait.until(ExpectedConditions.visibilityOf(mainPage.followAndSubscribeOnYouTube));
-        Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(mainPage.followAndSubscribeOnYouTube).click().perform();
 
     }
 
     @Then("user should see YouTube page")
     public void userShouldSeeYouTubePage() {
-
         String youTubeTitle = "Noizy Oysters - YouTube";
         Set<String> st = Driver.getDriver().getWindowHandles();
         for (String eachHandle : st) {
