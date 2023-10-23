@@ -21,19 +21,20 @@ public class ReservationStepDef {
     Faker faker = new Faker();
     String quantity;
     Actions actions = new Actions(Driver.getDriver());
-    JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
+    JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofMillis(4000));
 
 
     @Given("user at the online-reservation page")
     public void user_at_the_online_reservation_page() {
-       ReservationPage.goToReservationPage();
+        ReservationPage.goToReservationPage();
         Assert.assertEquals("Online Reservation – Noizy Oysters Bar & Grill", Driver.getDriver().getTitle());
     }
+
     @When("user enter information in all fields and click submit button")
     public void user_enter_information_in_all_fields_and_click_submit_button() throws InterruptedException {
         reservationPage.name.sendKeys(faker.name().fullName());
-        reservationPage.email.sendKeys(faker.animal().name()+"@gmail.com");
+        reservationPage.email.sendKeys(faker.animal().name() + "@gmail.com");
         reservationPage.phone.sendKeys(faker.phoneNumber().cellPhone());
         Select select = new Select(reservationPage.howManyPeople);
         select.selectByVisibleText("12");
@@ -42,6 +43,7 @@ public class ReservationStepDef {
 
 
     }
+
     @Then("user will see reservation approved page")
     public void user_will_see_reservation_approved_page() {
 
@@ -49,7 +51,7 @@ public class ReservationStepDef {
 
     @When("user enters all information except name")
     public void userEntersAllInformationExceptName() {
-        reservationPage.email.sendKeys(faker.animal().name()+"@gmail.com");
+        reservationPage.email.sendKeys(faker.animal().name() + "@gmail.com");
         reservationPage.phone.sendKeys(faker.phoneNumber().cellPhone());
         Select select = new Select(reservationPage.howManyPeople);
         select.selectByVisibleText("12");
@@ -86,7 +88,7 @@ public class ReservationStepDef {
     @When("user enter all information except phone")
     public void userEnterAllInformationExceptPhone() {
         reservationPage.name.sendKeys(faker.name().fullName());
-        reservationPage.email.sendKeys(faker.animal().name()+"@gmail.com");
+        reservationPage.email.sendKeys(faker.animal().name() + "@gmail.com");
         reservationPage.phone.click();
         actions.sendKeys(Keys.PAGE_DOWN).pause(Duration.ofMillis(2000)).perform();
         Select select = new Select(reservationPage.howManyPeople);
@@ -108,9 +110,9 @@ public class ReservationStepDef {
     @When("user enter all information and choose {string} of people")
     public void userEnterAllInformationAndChooseOfPeople(String amount) {
         reservationPage.name.sendKeys(faker.name().fullName());
-        reservationPage.email.sendKeys(faker.animal().name()+"@gmail.com");
+        reservationPage.email.sendKeys(faker.animal().name() + "@gmail.com");
         reservationPage.phone.sendKeys(faker.phoneNumber().cellPhone());
-                js.executeScript("window.scrollBy(0,400)");
+        js.executeScript("window.scrollBy(0,400)");
         Select select = new Select(reservationPage.howManyPeople);
         select.selectByVisibleText(amount);
         reservationPage.dateTime.click();
