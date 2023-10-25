@@ -8,47 +8,61 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver {
 
+    private Driver() { }
 
-    private Driver() {
-    }
 
-    private static WebDriver driver;
+    private static  InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
+
 
     public static WebDriver getDriver() {
+
         String browserName = ConfigReader.read("browser");
-        if (driver == null) {
+
+        if (driverPool.get() == null) {
             switch (browserName.toLowerCase()) {
+
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    driverPool.set(new ChromeDriver());
                     break;
+
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driver = new FirefoxDriver();
-                    driver.manage().window().maximize();
+                    driverPool.set(new FirefoxDriver());
                     break;
+
                 case "edge":
                     WebDriverManager.edgedriver().setup();
-                    driver = new EdgeDriver();
-                    driver.manage().window().maximize();
+                    driverPool.set(new EdgeDriver());
                     break;
+
                 default:
-                    driver = null;
                     System.out.println("Unknown browser type! " + browserName);
+
             }
-            return driver;
+
+            return driverPool.get();
+
         } else {
-            return driver;
+
+            return driverPool.get();
+
         }
     }
 
-    public static void closeBrowser() {
 
-        if (driver != null) {
-            driver.quit();
-            driver = null;
+
+
+
+
+    public static void closeBrowser () {
+
+        if (driverPool.get()!=null) {
+            driverPool.get().quit();
+            driverPool.set(null);
         }
-    }
 
+
+    }
 
 }

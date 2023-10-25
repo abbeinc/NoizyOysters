@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="User should be able to fill and submit reservation form" time="348.508" tests="15" errors="3" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="C:\Users\USER\WORKSPACE\NoizyOysters\target\test-classes;C:\Users\USER\WORKSPACE\NoizyOysters\target\classes;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-java\4.8.1\selenium-java-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-api\4.8.1\selenium-api-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.8.1\selenium-chrome-driver-4.8.1.jar;C:\Users\USER\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\USER\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\USER\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\USER\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\USER\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\USER\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\USER\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\USER\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\USER\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\USER\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.8.1\selenium-chromium-driver-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-json\4.8.1\selenium-json-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v108\4.8.1\selenium-devtools-v108-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v109\4.8.1\selenium-devtools-v109-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v110\4.8.1\selenium-devtools-v110-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.8.1\selenium-devtools-v85-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.8.1\selenium-edge-driver-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.8.1\selenium-firefox-driver-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-http\4.8.1\selenium-http-4.8.1.jar;C:\Users\USER\.m2\repository\dev\failsafe\failsafe\3.3.0\failsafe-3.3.0.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.8.1\selenium-ie-driver-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.8.1\selenium-remote-driver-4.8.1.jar;C:\Users\USER\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\USER\.m2\repository\io\netty\netty-buffer\4.1.87.Final\netty-buffer-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-codec-http\4.1.87.Final\netty-codec-http-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-codec\4.1.87.Final\netty-codec-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-handler\4.1.87.Final\netty-handler-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-common\4.1.87.Final\netty-common-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.87.Final\netty-transport-classes-epoll-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport-classes-kqueue\4.1.87.Final\netty-transport-classes-kqueue-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport-native-epoll\4.1.87.Final\netty-transport-native-epoll-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.87.Final\netty-transport-native-kqueue-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.87.Final\netty-transport-native-unix-common-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport\4.1.87.Final\netty-transport-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-resolver\4.1.87.Final\netty-resolver-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-api\1.22.0\opentelemetry-api-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-context\1.22.0\opentelemetry-context-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.22.0\opentelemetry-exporter-logging-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.22.0\opentelemetry-sdk-metrics-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.22.0-alpha\opentelemetry-sdk-logs-1.22.0-alpha.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-api-logs\1.22.0-alpha\opentelemetry-api-logs-1.22.0-alpha.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.22.0\opentelemetry-sdk-common-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.22.0\opentelemetry-sdk-extension-autoconfigure-spi-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.22.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.22.0-alpha.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.22.0\opentelemetry-sdk-trace-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.22.0\opentelemetry-sdk-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.22.0-alpha\opentelemetry-semconv-1.22.0-alpha.jar;C:\Users\USER\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\USER\.m2\repository\net\bytebuddy\byte-buddy\1.12.22\byte-buddy-1.12.22.jar;C:\Users\USER\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\USER\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\USER\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\USER\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\USER\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\USER\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\USER\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.8.1\selenium-manager-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.8.1\selenium-safari-driver-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-support\4.8.1\selenium-support-4.8.1.jar;C:\Users\USER\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\USER\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\USER\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\USER\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\USER\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\USER\.m2\repository\io\github\bonigarcia\webdrivermanager\5.3.2\webdrivermanager-5.3.2.jar;C:\Users\USER\.m2\repository\org\slf4j\slf4j-api\2.0.6\slf4j-api-2.0.6.jar;C:\Users\USER\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\USER\.m2\repository\com\github\docker-java\docker-java\3.2.14\docker-java-3.2.14.jar;C:\Users\USER\.m2\repository\com\github\docker-java\docker-java-core\3.2.14\docker-java-core-3.2.14.jar;C:\Users\USER\.m2\repository\com\github\docker-java\docker-java-api\3.2.14\docker-java-api-3.2.14.jar;C:\Users\USER\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\USER\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\USER\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\USER\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\USER\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\USER\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.64\bcpkix-jdk15on-1.64.jar;C:\Users\USER\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;C:\Users\USER\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\USER\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.2.14\docker-java-transport-httpclient5-3.2.14.jar;C:\Users\USER\.m2\repository\com\github\docker-java\docker-java-transport\3.2.14\docker-java-transport-3.2.14.jar;C:\Users\USER\.m2\repository\net\java\dev\jna\jna\5.12.1\jna-5.12.1.jar;C:\Users\USER\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\USER\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\USER\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\USER\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-java\7.11.1\cucumber-java-7.11.1.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-core\7.11.1\cucumber-core-7.11.1.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-gherkin\7.11.1\cucumber-gherkin-7.11.1.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.11.1\cucumber-gherkin-messages-7.11.1.jar;C:\Users\USER\.m2\repository\io\cucumber\gherkin\26.0.3\gherkin-26.0.3.jar;C:\Users\USER\.m2\repository\io\cucumber\messages\21.0.1\messages-21.0.1.jar;C:\Users\USER\.m2\repository\io\cucumber\tag-expressions\5.0.1\tag-expressions-5.0.1.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-expressions\16.1.2\cucumber-expressions-16.1.2.jar;C:\Users\USER\.m2\repository\io\cucumber\datatable\7.11.1\datatable-7.11.1.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-plugin\7.11.1\cucumber-plugin-7.11.1.jar;C:\Users\USER\.m2\repository\io\cucumber\docstring\7.11.1\docstring-7.11.1.jar;C:\Users\USER\.m2\repository\io\cucumber\html-formatter\20.2.1\html-formatter-20.2.1.jar;C:\Users\USER\.m2\repository\io\cucumber\junit-xml-formatter\0.1.0\junit-xml-formatter-0.1.0.jar;C:\Users\USER\.m2\repository\io\cucumber\ci-environment\9.1.0\ci-environment-9.1.0.jar;C:\Users\USER\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-junit\7.11.1\cucumber-junit-7.11.1.jar;C:\Users\USER\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\USER\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\USER\.m2\repository\org\slf4j\slf4j-simple\2.0.5\slf4j-simple-2.0.5.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="GMT-04:00"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\USER\AppData\Local\Temp\surefire2946193186326815441\surefirebooter7375233166181150455.jar C:\Users\USER\AppData\Local\Temp\surefire2946193186326815441 2023-10-25T02-35-02_462-jvmRun1 surefire106226639237363629tmp surefire_0733503198875715911tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\USER\WORKSPACE\NoizyOysters\target\test-classes;C:\Users\USER\WORKSPACE\NoizyOysters\target\classes;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-java\4.8.1\selenium-java-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-api\4.8.1\selenium-api-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.8.1\selenium-chrome-driver-4.8.1.jar;C:\Users\USER\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\USER\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\USER\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\USER\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\USER\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\USER\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\USER\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\USER\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\USER\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\USER\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.8.1\selenium-chromium-driver-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-json\4.8.1\selenium-json-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v108\4.8.1\selenium-devtools-v108-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v109\4.8.1\selenium-devtools-v109-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v110\4.8.1\selenium-devtools-v110-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.8.1\selenium-devtools-v85-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.8.1\selenium-edge-driver-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.8.1\selenium-firefox-driver-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-http\4.8.1\selenium-http-4.8.1.jar;C:\Users\USER\.m2\repository\dev\failsafe\failsafe\3.3.0\failsafe-3.3.0.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.8.1\selenium-ie-driver-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.8.1\selenium-remote-driver-4.8.1.jar;C:\Users\USER\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\USER\.m2\repository\io\netty\netty-buffer\4.1.87.Final\netty-buffer-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-codec-http\4.1.87.Final\netty-codec-http-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-codec\4.1.87.Final\netty-codec-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-handler\4.1.87.Final\netty-handler-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-common\4.1.87.Final\netty-common-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.87.Final\netty-transport-classes-epoll-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport-classes-kqueue\4.1.87.Final\netty-transport-classes-kqueue-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport-native-epoll\4.1.87.Final\netty-transport-native-epoll-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.87.Final\netty-transport-native-kqueue-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.87.Final\netty-transport-native-unix-common-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport\4.1.87.Final\netty-transport-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-resolver\4.1.87.Final\netty-resolver-4.1.87.Final.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-api\1.22.0\opentelemetry-api-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-context\1.22.0\opentelemetry-context-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.22.0\opentelemetry-exporter-logging-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.22.0\opentelemetry-sdk-metrics-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.22.0-alpha\opentelemetry-sdk-logs-1.22.0-alpha.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-api-logs\1.22.0-alpha\opentelemetry-api-logs-1.22.0-alpha.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.22.0\opentelemetry-sdk-common-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.22.0\opentelemetry-sdk-extension-autoconfigure-spi-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.22.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.22.0-alpha.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.22.0\opentelemetry-sdk-trace-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.22.0\opentelemetry-sdk-1.22.0.jar;C:\Users\USER\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.22.0-alpha\opentelemetry-semconv-1.22.0-alpha.jar;C:\Users\USER\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\USER\.m2\repository\net\bytebuddy\byte-buddy\1.12.22\byte-buddy-1.12.22.jar;C:\Users\USER\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\USER\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\USER\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\USER\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\USER\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\USER\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\USER\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\USER\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.8.1\selenium-manager-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.8.1\selenium-safari-driver-4.8.1.jar;C:\Users\USER\.m2\repository\org\seleniumhq\selenium\selenium-support\4.8.1\selenium-support-4.8.1.jar;C:\Users\USER\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\USER\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\USER\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\USER\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\USER\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\USER\.m2\repository\io\github\bonigarcia\webdrivermanager\5.3.2\webdrivermanager-5.3.2.jar;C:\Users\USER\.m2\repository\org\slf4j\slf4j-api\2.0.6\slf4j-api-2.0.6.jar;C:\Users\USER\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\USER\.m2\repository\com\github\docker-java\docker-java\3.2.14\docker-java-3.2.14.jar;C:\Users\USER\.m2\repository\com\github\docker-java\docker-java-core\3.2.14\docker-java-core-3.2.14.jar;C:\Users\USER\.m2\repository\com\github\docker-java\docker-java-api\3.2.14\docker-java-api-3.2.14.jar;C:\Users\USER\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\USER\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\USER\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\USER\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\USER\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\USER\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.64\bcpkix-jdk15on-1.64.jar;C:\Users\USER\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;C:\Users\USER\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\USER\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.2.14\docker-java-transport-httpclient5-3.2.14.jar;C:\Users\USER\.m2\repository\com\github\docker-java\docker-java-transport\3.2.14\docker-java-transport-3.2.14.jar;C:\Users\USER\.m2\repository\net\java\dev\jna\jna\5.12.1\jna-5.12.1.jar;C:\Users\USER\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\USER\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\USER\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\USER\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-java\7.11.1\cucumber-java-7.11.1.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-core\7.11.1\cucumber-core-7.11.1.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-gherkin\7.11.1\cucumber-gherkin-7.11.1.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.11.1\cucumber-gherkin-messages-7.11.1.jar;C:\Users\USER\.m2\repository\io\cucumber\gherkin\26.0.3\gherkin-26.0.3.jar;C:\Users\USER\.m2\repository\io\cucumber\messages\21.0.1\messages-21.0.1.jar;C:\Users\USER\.m2\repository\io\cucumber\tag-expressions\5.0.1\tag-expressions-5.0.1.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-expressions\16.1.2\cucumber-expressions-16.1.2.jar;C:\Users\USER\.m2\repository\io\cucumber\datatable\7.11.1\datatable-7.11.1.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-plugin\7.11.1\cucumber-plugin-7.11.1.jar;C:\Users\USER\.m2\repository\io\cucumber\docstring\7.11.1\docstring-7.11.1.jar;C:\Users\USER\.m2\repository\io\cucumber\html-formatter\20.2.1\html-formatter-20.2.1.jar;C:\Users\USER\.m2\repository\io\cucumber\junit-xml-formatter\0.1.0\junit-xml-formatter-0.1.0.jar;C:\Users\USER\.m2\repository\io\cucumber\ci-environment\9.1.0\ci-environment-9.1.0.jar;C:\Users\USER\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\USER\.m2\repository\io\cucumber\cucumber-junit\7.11.1\cucumber-junit-7.11.1.jar;C:\Users\USER\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\USER\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\USER\.m2\repository\org\slf4j\slf4j-simple\2.0.5\slf4j-simple-2.0.5.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\USER"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_231\jre"/>
+    <property name="basedir" value="C:\Users\USER\WORKSPACE\NoizyOysters"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\USER\AppData\Local\Temp\surefire2946193186326815441\surefirebooter7375233166181150455.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_231\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_231-b11"/>
+    <property name="user.name" value="USER"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_231\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\USER\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\USER\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2022.3.2"/>
+    <property name="java.version" value="1.8.0_231"/>
+    <property name="user.dir" value="C:\Users\USER\WORKSPACE\NoizyOysters"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="webdriver.gecko.driver" value="C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Maven\apache-maven-3.9.5\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_231\bin;C:\Users\USER\AppData\Local\Microsoft\WindowsApps;C:\Users\USER\AppData\Local\JetBrains\Toolbox\scripts;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.231-b11"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_231\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="user enter correct data for 2 people and choosing time" classname="User should be able to fill and submit reservation form" time="34.337">
+    <system-out><![CDATA[&amp#27;[32m&amp#27;[1m┌──────────────────────────────────────────────────────────────────────────┐&amp#27;[0m
+&amp#27;[32m&amp#27;[1m│&amp#27;[0m View your Cucumber Report at:                                            &amp#27;[32m&amp#27;[1m│&amp#27;[0m
+&amp#27;[32m&amp#27;[1m│&amp#27;[0m &amp#27;[1m&amp#27;[36m&amp#27;[4mhttps://reports.cucumber.io/reports/930dc662-4ec3-4cd9-ba50-b1edc4863b9a&amp#27;[0m &amp#27;[32m&amp#27;[1m│&amp#27;[0m
+&amp#27;[32m&amp#27;[1m│&amp#27;[0m                                                                          &amp#27;[32m&amp#27;[1m│&amp#27;[0m
+&amp#27;[32m&amp#27;[1m│&amp#27;[0m &amp#27;[1mThis report will self-destruct in 24h.&amp#27;[0m                                   &amp#27;[32m&amp#27;[1m│&amp#27;[0m
+&amp#27;[32m&amp#27;[1m│&amp#27;[0m Keep reports forever: &amp#27;[4m&amp#27;[1m&amp#27;[36mhttps://reports.cucumber.io/profile&amp#27;[0m                &amp#27;[32m&amp#27;[1m│&amp#27;[0m
+&amp#27;[32m&amp#27;[1m└──────────────────────────────────────────────────────────────────────────┘&amp#27;[0m
+
+@regression
+Scenario: user enter correct data for 2 people and choosing time    &amp#27;[90m# src/test/resources/features/reservation.feature:7&amp#27;[0m
+THIS IS FROM @Before inside hooks class
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser at the online-reservation page&amp#27;[0m                         &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_at_the_online_reservation_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32muser enter information in all fields and click submit button&amp#27;[0m &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_enter_information_in_all_fields_and_click_submit_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32muser will see reservation approved page&amp#27;[0m                      &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_will_see_reservation_approved_page()&amp#27;[0m
+THIS IS FROM @After inside hooks class
+]]></system-out>
+    <system-err><![CDATA[[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 118)
+[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe
+1698215706647	geckodriver	INFO	Listening on 127.0.0.1:7012
+1698215707714	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "44790" "--remote ... /localhost:44790/,http://[::1]:44790/" "-no-remote" "-profile" "C:\\Users\\USER\\AppData\\Local\\Temp\\rust_mozprofileJ4aIet"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1698215709004	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1698215709210	Marionette	INFO	Listening on port 65348
+WebDriver BiDi listening on ws://127.0.0.1:44790
+Read port: 65348
+1698215710069	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:44790/devtools/browser/a0c542e6-2bc8-41a6-bee2-69c4e14e3316
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+1698215736338	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:49161
+1698215736344	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1698215736369	Marionette	INFO	Stopped listening on port 65348
+JavaScript warning: https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js, line 525: Script terminated by timeout at:
+E@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:525:293
+
+Dynamically enable window occlusion 1
+!!! error running onStopped callback: TypeError: callback is not a function
+]]></system-err>
+  </testcase>
+  <testcase name="user enters  all information except Name" classname="User should be able to fill and submit reservation form" time="28.39">
+    <system-out><![CDATA[
+@regression
+Scenario: user enters  all information except Name &amp#27;[90m# src/test/resources/features/reservation.feature:12&amp#27;[0m
+THIS IS FROM @Before inside hooks class
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser at the online-reservation page&amp#27;[0m        &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_at_the_online_reservation_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32muser enters all information except name&amp#27;[0m     &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userEntersAllInformationExceptName()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32muser should see warning sign for name&amp#27;[0m       &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userShouldSeeWarningSignForName()&amp#27;[0m
+THIS IS FROM @After inside hooks class
+]]></system-out>
+    <system-err><![CDATA[[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 118)
+[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe
+1698215739595	geckodriver	INFO	Listening on 127.0.0.1:37017
+1698215740141	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "39367" "--remote ... /localhost:39367/,http://[::1]:39367/" "-no-remote" "-profile" "C:\\Users\\USER\\AppData\\Local\\Temp\\rust_mozprofileKg5LhV"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1698215741205	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1698215741405	Marionette	INFO	Listening on port 49168
+WebDriver BiDi listening on ws://127.0.0.1:39367
+Read port: 49168
+1698215741955	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:39367/devtools/browser/9a134c88-e744-4194-8446-dfbc285cba3e
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.error: ({})
+1698215756978	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:49264
+1698215756983	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1698215756993	Marionette	INFO	Stopped listening on port 49168
+Dynamically enable window occlusion 1
+]]></system-err>
+  </testcase>
+  <testcase name="user enters all information except email" classname="User should be able to fill and submit reservation form" time="28.114">
+    <system-out><![CDATA[
+@regression
+Scenario: user enters all information except email &amp#27;[90m# src/test/resources/features/reservation.feature:17&amp#27;[0m
+THIS IS FROM @Before inside hooks class
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser at the online-reservation page&amp#27;[0m        &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_at_the_online_reservation_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32muser enter all information except email&amp#27;[0m     &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationExceptEmail()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32muser should see warning sign for email&amp#27;[0m      &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userShouldSeeWarningSignForEmail()&amp#27;[0m
+THIS IS FROM @After inside hooks class
+]]></system-out>
+    <system-err><![CDATA[[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 118)
+[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe
+1698215768005	geckodriver	INFO	Listening on 127.0.0.1:13362
+1698215768511	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "48726" "--remote ... /localhost:48726/,http://[::1]:48726/" "-no-remote" "-profile" "C:\\Users\\USER\\AppData\\Local\\Temp\\rust_mozprofileqNNf4s"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1698215769854	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1698215770294	Marionette	INFO	Listening on port 49344
+WebDriver BiDi listening on ws://127.0.0.1:48726
+Read port: 49344
+1698215771715	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:48726/devtools/browser/63a4e82a-a21f-4da8-9bbb-77003134422e
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.error: ({})
+1698215791528	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:49433
+1698215791533	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1698215791580	Marionette	INFO	Stopped listening on port 49344
+JavaScript warning: https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js, line 525: Script terminated by timeout at:
+E@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:525:293
+
+Dynamically enable window occlusion 1
+]]></system-err>
+  </testcase>
+  <testcase name="user enters all information except phone" classname="User should be able to fill and submit reservation form" time="41.156">
+    <error message="The element with the reference 9ffb15b3-0557-4083-baa8-5389b35bf3c8 is stale; either its node document is not the active document, or it is no longer connected to the DOM&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference&#10;Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;&#10;System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Command: [6df48dc7-b95e-4225-98ac-d178d194a43f, clickElement {id=9ffb15b3-0557-4083-baa8-5389b35bf3c8}]&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:24980, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 14688, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:24980/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Element: [[FirefoxDriver: firefox on WINDOWS (6df48dc7-b95e-4225-98ac-d178d194a43f)] -&gt; xpath: //div[@class=&apos;xdsoft_time &apos;][2]]&#10;Session ID: 6df48dc7-b95e-4225-98ac-d178d194a43f" type="org.openqa.selenium.StaleElementReferenceException"><![CDATA[org.openqa.selenium.StaleElementReferenceException: 
+The element with the reference 9ffb15b3-0557-4083-baa8-5389b35bf3c8 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [6df48dc7-b95e-4225-98ac-d178d194a43f, clickElement {id=9ffb15b3-0557-4083-baa8-5389b35bf3c8}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:24980, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 14688, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:24980/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (6df48dc7-b95e-4225-98ac-d178d194a43f)] -> xpath: //div[@class='xdsoft_time '][2]]
+Session ID: 6df48dc7-b95e-4225-98ac-d178d194a43f
+]]></error>
+    <system-out><![CDATA[
+@regression
+Scenario: user enters all information except phone &amp#27;[90m# src/test/resources/features/reservation.feature:22&amp#27;[0m
+THIS IS FROM @Before inside hooks class
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser at the online-reservation page&amp#27;[0m        &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_at_the_online_reservation_page()&amp#27;[0m
+  &amp#27;[31mWhen &amp#27;[0m&amp#27;[31muser enter all information except phone&amp#27;[0m     &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationExceptPhone()&amp#27;[0m
+      &amp#27;[31morg.openqa.selenium.StaleElementReferenceException: The element with the reference 9ffb15b3-0557-4083-baa8-5389b35bf3c8 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [6df48dc7-b95e-4225-98ac-d178d194a43f, clickElement {id=9ffb15b3-0557-4083-baa8-5389b35bf3c8}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:24980, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 14688, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:24980/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (6df48dc7-b95e-4225-98ac-d178d194a43f)] -> xpath: //div[@class='xdsoft_time '][2]]
+Session ID: 6df48dc7-b95e-4225-98ac-d178d194a43f
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy22.click(Unknown Source)
+	at com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationExceptPhone(ReservationStepDef.java:98)
+	at вњЅ.user enter all information except phone(file:///C:/Users/USER/WORKSPACE/NoizyOysters/src/test/resources/features/reservation.feature:23)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36muser should see warning sing for phone&amp#27;[0m      &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userShouldSeeWarningSingForPhone()&amp#27;[0m
+
+    Embedding Attached img [image/png 89448 bytes]
+
+THIS IS FROM @After inside hooks class
+]]></system-out>
+    <system-err><![CDATA[[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 118)
+[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe
+1698215796150	geckodriver	INFO	Listening on 127.0.0.1:24734
+1698215796741	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "24980" "--remote ... /localhost:24980/,http://[::1]:24980/" "-no-remote" "-profile" "C:\\Users\\USER\\AppData\\Local\\Temp\\rust_mozprofileAHPwz7"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1698215797513	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1698215797800	Marionette	INFO	Listening on port 49447
+WebDriver BiDi listening on ws://127.0.0.1:24980
+Read port: 49447
+1698215798748	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:24980/devtools/browser/90425946-31ff-46e3-a510-1895818fa71f
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+1698215829787	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:49560
+1698215829793	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1698215830007	Marionette	INFO	Stopped listening on port 49447
+JavaScript warning: https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js, line 831: Script terminated by timeout at:
+@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:831:297
+E@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:525:410
+
+Dynamically enable window occlusion 1
+console.warn: services.settings: blocklists/addons-bloomfilters sync interrupted by shutdown
+console.warn: services.settings: blocklists/gfx sync interrupted by shutdown
+!!! error running onStopped callback: TypeError: callback is not a function
+console.error: (new AbortError("IndexedDB: main/normandy-recipes getLastModified() IndexedDB:  execute() A request was aborted, for example through a call to IDBTransaction.abort.", "resource://services-settings/IDBHelpers.sys.mjs", 16))
+]]></system-err>
+  </testcase>
+  <testcase name=" #1" classname="User should be able to fill and submit reservation form" time="18.521">
+    <system-out><![CDATA[
+@regression
+Scenario Outline:                                          &amp#27;[90m# src/test/resources/features/reservation.feature:32&amp#27;[0m
+THIS IS FROM @Before inside hooks class
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser at the online-reservation page&amp#27;[0m                &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_at_the_online_reservation_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32muser enter all information and choose &amp#27;[0m&amp#27;[32m&amp#27;[1m"2"&amp#27;[0m&amp#27;[32m of people&amp#27;[0m &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationAndChooseOfPeople(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32muser should see correct quantity on the screen&amp#27;[0m      &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userShouldSeeCorrectQuantityOnTheScreen()&amp#27;[0m
+THIS IS FROM @After inside hooks class
+]]></system-out>
+    <system-err><![CDATA[[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 118)
+[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe
+1698215837557	geckodriver	INFO	Listening on 127.0.0.1:13507
+1698215838043	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "3104" "--remote- ... ://localhost:3104/,http://[::1]:3104/" "-no-remote" "-profile" "C:\\Users\\USER\\AppData\\Local\\Temp\\rust_mozprofileMmyJy7"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1698215839430	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1698215839786	Marionette	INFO	Listening on port 49619
+WebDriver BiDi listening on ws://127.0.0.1:3104
+Read port: 49619
+1698215840510	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:3104/devtools/browser/c27e4455-6632-42ae-a6ea-41fc95c61e45
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+1698215852379	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:49672
+1698215852383	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1698215852398	Marionette	INFO	Stopped listening on port 49619
+JavaScript warning: https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js, line 529: Script terminated by timeout at:
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:529:474
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:509:321
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:508:60
+I<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:274:405
+K<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:97:47
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:492:203
+X<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:436:430
+T</u/T</U<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:168:268
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:526:490
+T</B.S/T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:151:46
+X<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:461:436
+V</this.next@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:531:160
+V</H<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:393
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:286
+T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:138:306
+T</B.S@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:150:409
+T</u/T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:168:294
+X<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:461:436
+V</this.next@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:531:160
+V</H<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:393
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:286
+T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:138:306
+u@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:167:458
+I</n</<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:324:201
+I</n<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:324:170
+X<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:461:436
+V</this.next@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:531:160
+V</H<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:393
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:286
+T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:138:306
+I<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:323:476
+T</u/T</U<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:168:268
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:526:490
+T</B.S/T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:151:46
+X<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:461:436
+V</this.next@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:531:160
+V</H<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:393
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:286
+T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:138:306
+T</B.S@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:150:409
+T</u/T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:168:294
+X<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:461:436
+V</this.next@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:531:160
+V</H<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:393
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:286
+T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:138:306
+u@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:167:458
+@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:945:296
+X<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:461:436
+V</this.next@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:531:160
+V</H<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:393
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:286
+T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:138:306
+@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:945:117
+g</a</<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:394:84
+g</a<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:394:56
+X<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:461:436
+V</this.next@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:531:160
+B@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:239
+
+JavaScript warning: https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js, line 155: Script terminated by timeout at:
+l@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:155:393
+
+Dynamically enable window occlusion 1
+]]></system-err>
+  </testcase>
+  <testcase name=" #2" classname="User should be able to fill and submit reservation form" time="24.283">
+    <error message="The element with the reference c06ba470-e43c-4a8b-9d78-e53a48407a16 is stale; either its node document is not the active document, or it is no longer connected to the DOM&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference&#10;Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;&#10;System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Command: [5d22062b-e937-424e-9537-75561141009d, clickElement {id=c06ba470-e43c-4a8b-9d78-e53a48407a16}]&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:9552, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 14048, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:9552/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Element: [[FirefoxDriver: firefox on WINDOWS (5d22062b-e937-424e-9537-75561141009d)] -&gt; xpath: //div[@class=&apos;xdsoft_time &apos;][2]]&#10;Session ID: 5d22062b-e937-424e-9537-75561141009d" type="org.openqa.selenium.StaleElementReferenceException"><![CDATA[org.openqa.selenium.StaleElementReferenceException: 
+The element with the reference c06ba470-e43c-4a8b-9d78-e53a48407a16 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5d22062b-e937-424e-9537-75561141009d, clickElement {id=c06ba470-e43c-4a8b-9d78-e53a48407a16}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:9552, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 14048, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:9552/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (5d22062b-e937-424e-9537-75561141009d)] -> xpath: //div[@class='xdsoft_time '][2]]
+Session ID: 5d22062b-e937-424e-9537-75561141009d
+]]></error>
+    <system-out><![CDATA[
+@regression
+Scenario Outline:                                          &amp#27;[90m# src/test/resources/features/reservation.feature:33&amp#27;[0m
+THIS IS FROM @Before inside hooks class
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser at the online-reservation page&amp#27;[0m                &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_at_the_online_reservation_page()&amp#27;[0m
+  &amp#27;[31mWhen &amp#27;[0m&amp#27;[31muser enter all information and choose &amp#27;[0m&amp#27;[31m&amp#27;[1m"3"&amp#27;[0m&amp#27;[31m of people&amp#27;[0m &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationAndChooseOfPeople(java.lang.String)&amp#27;[0m
+      &amp#27;[31morg.openqa.selenium.StaleElementReferenceException: The element with the reference c06ba470-e43c-4a8b-9d78-e53a48407a16 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5d22062b-e937-424e-9537-75561141009d, clickElement {id=c06ba470-e43c-4a8b-9d78-e53a48407a16}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:9552, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 14048, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:9552/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (5d22062b-e937-424e-9537-75561141009d)] -> xpath: //div[@class='xdsoft_time '][2]]
+Session ID: 5d22062b-e937-424e-9537-75561141009d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at sun.reflect.GeneratedMethodAccessor111.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy22.click(Unknown Source)
+	at com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationAndChooseOfPeople(ReservationStepDef.java:119)
+	at вњЅ.user enter all information and choose "3" of people(file:///C:/Users/USER/WORKSPACE/NoizyOysters/src/test/resources/features/reservation.feature:28)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36muser should see correct quantity on the screen&amp#27;[0m      &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userShouldSeeCorrectQuantityOnTheScreen()&amp#27;[0m
+
+    Embedding Attached img [image/png 75087 bytes]
+
+THIS IS FROM @After inside hooks class
+]]></system-out>
+    <system-err><![CDATA[[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 118)
+[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe
+1698215855757	geckodriver	INFO	Listening on 127.0.0.1:40640
+1698215856420	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "9552" "--remote- ... ://localhost:9552/,http://[::1]:9552/" "-no-remote" "-profile" "C:\\Users\\USER\\AppData\\Local\\Temp\\rust_mozprofilelUw2ax"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1698215857449	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1698215857684	Marionette	INFO	Listening on port 49692
+WebDriver BiDi listening on ws://127.0.0.1:9552
+Read port: 49692
+1698215858913	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:9552/devtools/browser/422fd357-ec43-482f-ab93-34b60ac6f826
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+1698215870937	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:49768
+1698215870941	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1698215870967	Marionette	INFO	Stopped listening on port 49692
+JavaScript warning: https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js, line 320: Script terminated by timeout at:
+I<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:320:433
+d5@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:542:145
+g<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:360:1
+I<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:263:151
+T</u/T</U<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:168:268
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:526:490
+T</B.S/T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:151:46
+X<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:461:436
+V</this.next@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:531:160
+V</H<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:393
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:286
+T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:138:306
+T</B.S@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:150:409
+T</u/T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:168:294
+X<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:461:436
+V</this.next@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:531:160
+V</H<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:393
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:286
+T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:138:306
+u@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:167:458
+I</p</H<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:284:465
+
+JavaScript warning: https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js, line 155: Script terminated by timeout at:
+l@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:155:393
+
+Dynamically enable window occlusion 1
+]]></system-err>
+  </testcase>
+  <testcase name=" #3" classname="User should be able to fill and submit reservation form" time="23.537">
+    <system-out><![CDATA[
+@regression
+Scenario Outline:                                          &amp#27;[90m# src/test/resources/features/reservation.feature:34&amp#27;[0m
+THIS IS FROM @Before inside hooks class
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser at the online-reservation page&amp#27;[0m                &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_at_the_online_reservation_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32muser enter all information and choose &amp#27;[0m&amp#27;[32m&amp#27;[1m"4"&amp#27;[0m&amp#27;[32m of people&amp#27;[0m &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationAndChooseOfPeople(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32muser should see correct quantity on the screen&amp#27;[0m      &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userShouldSeeCorrectQuantityOnTheScreen()&amp#27;[0m
+THIS IS FROM @After inside hooks class
+]]></system-out>
+    <system-err><![CDATA[[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 118)
+[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe
+1698215880068	geckodriver	INFO	Listening on 127.0.0.1:22160
+1698215880671	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "48669" "--remote ... /localhost:48669/,http://[::1]:48669/" "-no-remote" "-profile" "C:\\Users\\USER\\AppData\\Local\\Temp\\rust_mozprofileXtItOc"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1698215881140	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1698215881236	Marionette	INFO	Listening on port 49774
+WebDriver BiDi listening on ws://127.0.0.1:48669
+Read port: 49774
+1698215881603	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:48669/devtools/browser/5d6b6914-3f07-42af-8d08-00747b07643d
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+1698215890986	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:49834
+1698215890991	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1698215891033	Marionette	INFO	Stopped listening on port 49774
+JavaScript warning: https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js, line 136: Script terminated by timeout at:
+T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:136:445
+K<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:113:286
+by<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:651:510
+r</O<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:254:216
+r<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:254:124
+T</u/T</U<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:168:268
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:526:490
+T</B.S/T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:151:46
+X<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:461:436
+V</this.next@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:531:160
+V</H<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:393
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:286
+T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:138:306
+T</B.S@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:150:409
+T</u/T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:168:294
+X<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:461:436
+V</this.next@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:531:160
+V</H<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:393
+V<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:533:286
+T<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:138:306
+u@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:167:458
+I</p</H<@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:284:465
+
+JavaScript warning: https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js, line 155: Script terminated by timeout at:
+l@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:155:393
+
+Dynamically enable window occlusion 1
+!!! error running onStopped callback: TypeError: callback is not a function
+]]></system-err>
+  </testcase>
+  <testcase name=" #4" classname="User should be able to fill and submit reservation form" time="25.8">
+    <system-out><![CDATA[
+@regression
+Scenario Outline:                                          &amp#27;[90m# src/test/resources/features/reservation.feature:35&amp#27;[0m
+THIS IS FROM @Before inside hooks class
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser at the online-reservation page&amp#27;[0m                &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_at_the_online_reservation_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32muser enter all information and choose &amp#27;[0m&amp#27;[32m&amp#27;[1m"5"&amp#27;[0m&amp#27;[32m of people&amp#27;[0m &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationAndChooseOfPeople(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32muser should see correct quantity on the screen&amp#27;[0m      &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userShouldSeeCorrectQuantityOnTheScreen()&amp#27;[0m
+THIS IS FROM @After inside hooks class
+]]></system-out>
+    <system-err><![CDATA[[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 118)
+[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe
+1698215903557	geckodriver	INFO	Listening on 127.0.0.1:28383
+1698215904308	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "31363" "--remote ... /localhost:31363/,http://[::1]:31363/" "-no-remote" "-profile" "C:\\Users\\USER\\AppData\\Local\\Temp\\rust_mozprofileYCTN7K"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1698215905027	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1698215905123	Marionette	INFO	Listening on port 49865
+WebDriver BiDi listening on ws://127.0.0.1:31363
+Read port: 49865
+1698215905438	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:31363/devtools/browser/7ff7d756-cb80-4f64-9bd8-8094d69fdcd7
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+1698215926927	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:49951
+1698215926932	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1698215926948	Marionette	INFO	Stopped listening on port 49865
+JavaScript warning: https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js, line 155: Script terminated by timeout at:
+l@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:155:393
+
+JavaScript warning: https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js, line 155: Script terminated by timeout at:
+l@https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js:155:393
+
+Dynamically enable window occlusion 1
+!!! error running onStopped callback: TypeError: callback is not a function
+]]></system-err>
+  </testcase>
+  <testcase name=" #5" classname="User should be able to fill and submit reservation form" time="19.933">
+    <system-out><![CDATA[
+@regression
+Scenario Outline:                                          &amp#27;[90m# src/test/resources/features/reservation.feature:36&amp#27;[0m
+THIS IS FROM @Before inside hooks class
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser at the online-reservation page&amp#27;[0m                &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_at_the_online_reservation_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32muser enter all information and choose &amp#27;[0m&amp#27;[32m&amp#27;[1m"6"&amp#27;[0m&amp#27;[32m of people&amp#27;[0m &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationAndChooseOfPeople(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32muser should see correct quantity on the screen&amp#27;[0m      &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userShouldSeeCorrectQuantityOnTheScreen()&amp#27;[0m
+THIS IS FROM @After inside hooks class
+]]></system-out>
+    <system-err><![CDATA[[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 118)
+[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe
+1698215929356	geckodriver	INFO	Listening on 127.0.0.1:28944
+1698215930181	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "18267" "--remote ... /localhost:18267/,http://[::1]:18267/" "-no-remote" "-profile" "C:\\Users\\USER\\AppData\\Local\\Temp\\rust_mozprofilerIUzp5"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1698215932320	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1698215932462	Marionette	INFO	Listening on port 49957
+WebDriver BiDi listening on ws://127.0.0.1:18267
+Read port: 49957
+Read port: 49957
+1698215934336	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:18267/devtools/browser/699c0e45-e284-44fd-bbf1-c4b1192db57f
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.error: ({})
+1698215944162	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:50004
+1698215944167	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1698215944171	Marionette	INFO	Stopped listening on port 49957
+JavaScript warning: https://maps.googleapis.com/maps/api/js?client=google-maps-embed&paint_origin=&libraries=geometry,search&v=3.exp&language=en_US&callback=onApiLoad, line 152: Script terminated by timeout at:
+_.Tg@https://maps.googleapis.com/maps/api/js?client=google-maps-embed&paint_origin=&libraries=geometry,search&v=3.exp&language=en_US&callback=onApiLoad:152:14
+zea/<@https://maps.googleapis.com/maps/api/js?client=google-maps-embed&paint_origin=&libraries=geometry,search&v=3.exp&language=en_US&callback=onApiLoad:221:90
+
+Dynamically enable window occlusion 1
+!!! error running onStopped callback: TypeError: callback is not a function
+]]></system-err>
+  </testcase>
+  <testcase name=" #6" classname="User should be able to fill and submit reservation form" time="18.224">
+    <system-out><![CDATA[
+@regression
+Scenario Outline:                                          &amp#27;[90m# src/test/resources/features/reservation.feature:37&amp#27;[0m
+THIS IS FROM @Before inside hooks class
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser at the online-reservation page&amp#27;[0m                &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_at_the_online_reservation_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32muser enter all information and choose &amp#27;[0m&amp#27;[32m&amp#27;[1m"7"&amp#27;[0m&amp#27;[32m of people&amp#27;[0m &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationAndChooseOfPeople(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32muser should see correct quantity on the screen&amp#27;[0m      &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userShouldSeeCorrectQuantityOnTheScreen()&amp#27;[0m
+THIS IS FROM @After inside hooks class
+]]></system-out>
+    <system-err><![CDATA[[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 118)
+[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe
+1698215949328	geckodriver	INFO	Listening on 127.0.0.1:41998
+1698215949824	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "15411" "--remote ... /localhost:15411/,http://[::1]:15411/" "-no-remote" "-profile" "C:\\Users\\USER\\AppData\\Local\\Temp\\rust_mozprofileumsbyL"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1698215951393	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1698215951624	Marionette	INFO	Listening on port 50028
+WebDriver BiDi listening on ws://127.0.0.1:15411
+Read port: 50028
+1698215952207	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:15411/devtools/browser/375909ea-d2af-4d43-b812-c325e5af4630
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.error: ({})
+1698215964804	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:50088
+1698215964808	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1698215964817	Marionette	INFO	Stopped listening on port 50028
+JavaScript warning: https://maps.googleapis.com/maps/api/js?client=google-maps-embed&paint_origin=&libraries=geometry,search&v=3.exp&language=en_US&callback=onApiLoad, line 152: Script terminated by timeout at:
+_.Tg@https://maps.googleapis.com/maps/api/js?client=google-maps-embed&paint_origin=&libraries=geometry,search&v=3.exp&language=en_US&callback=onApiLoad:152:14
+zea/<@https://maps.googleapis.com/maps/api/js?client=google-maps-embed&paint_origin=&libraries=geometry,search&v=3.exp&language=en_US&callback=onApiLoad:221:90
+
+Dynamically enable window occlusion 1
+]]></system-err>
+  </testcase>
+  <testcase name=" #7" classname="User should be able to fill and submit reservation form" time="20.729">
+    <system-out><![CDATA[
+@regression
+Scenario Outline:                                          &amp#27;[90m# src/test/resources/features/reservation.feature:38&amp#27;[0m
+THIS IS FROM @Before inside hooks class
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser at the online-reservation page&amp#27;[0m                &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_at_the_online_reservation_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32muser enter all information and choose &amp#27;[0m&amp#27;[32m&amp#27;[1m"8"&amp#27;[0m&amp#27;[32m of people&amp#27;[0m &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationAndChooseOfPeople(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32muser should see correct quantity on the screen&amp#27;[0m      &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userShouldSeeCorrectQuantityOnTheScreen()&amp#27;[0m
+THIS IS FROM @After inside hooks class
+]]></system-out>
+    <system-err><![CDATA[[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 118)
+[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe
+1698215967511	geckodriver	INFO	Listening on 127.0.0.1:37943
+1698215968047	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "22330" "--remote ... /localhost:22330/,http://[::1]:22330/" "-no-remote" "-profile" "C:\\Users\\USER\\AppData\\Local\\Temp\\rust_mozprofile8X37ax"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1698215969117	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1698215969210	Marionette	INFO	Listening on port 50093
+Read port: 50093
+WebDriver BiDi listening on ws://127.0.0.1:22330
+1698215969310	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:22330/devtools/browser/40f1f743-d2e5-4b02-910f-cfb94d03877d
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+1698215983689	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:50167
+1698215983711	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1698215983964	Marionette	INFO	Stopped listening on port 50093
+Dynamically enable window occlusion 1
+!!! error running onStopped callback: TypeError: callback is not a function
+]]></system-err>
+  </testcase>
+  <testcase name=" #8" classname="User should be able to fill and submit reservation form" time="24.441">
+    <system-out><![CDATA[
+@regression
+Scenario Outline:                                          &amp#27;[90m# src/test/resources/features/reservation.feature:39&amp#27;[0m
+THIS IS FROM @Before inside hooks class
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser at the online-reservation page&amp#27;[0m                &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_at_the_online_reservation_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32muser enter all information and choose &amp#27;[0m&amp#27;[32m&amp#27;[1m"9"&amp#27;[0m&amp#27;[32m of people&amp#27;[0m &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationAndChooseOfPeople(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32muser should see correct quantity on the screen&amp#27;[0m      &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userShouldSeeCorrectQuantityOnTheScreen()&amp#27;[0m
+THIS IS FROM @After inside hooks class
+]]></system-out>
+    <system-err><![CDATA[[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 118)
+[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe
+1698215988212	geckodriver	INFO	Listening on 127.0.0.1:19107
+1698215988235	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "5391" "--remote- ... ://localhost:5391/,http://[::1]:5391/" "-no-remote" "-profile" "C:\\Users\\USER\\AppData\\Local\\Temp\\rust_mozprofileo5VAfd"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1698215988682	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1698215988775	Marionette	INFO	Listening on port 50188
+WebDriver BiDi listening on ws://127.0.0.1:5391
+Read port: 50188
+1698215988995	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:5391/devtools/browser/972171a6-e26a-4e09-94bd-35b8f0ed1500
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+1698216007493	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:50236
+1698216007498	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1698216007774	Marionette	INFO	Stopped listening on port 50188
+Dynamically enable window occlusion 1
+]]></system-err>
+  </testcase>
+  <testcase name=" #9" classname="User should be able to fill and submit reservation form" time="14.106">
+    <system-out><![CDATA[
+@regression
+Scenario Outline:                                           &amp#27;[90m# src/test/resources/features/reservation.feature:40&amp#27;[0m
+THIS IS FROM @Before inside hooks class
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser at the online-reservation page&amp#27;[0m                 &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_at_the_online_reservation_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32muser enter all information and choose &amp#27;[0m&amp#27;[32m&amp#27;[1m"10"&amp#27;[0m&amp#27;[32m of people&amp#27;[0m &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationAndChooseOfPeople(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32muser should see correct quantity on the screen&amp#27;[0m       &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userShouldSeeCorrectQuantityOnTheScreen()&amp#27;[0m
+THIS IS FROM @After inside hooks class
+]]></system-out>
+    <system-err><![CDATA[[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 118)
+[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe
+1698216012674	geckodriver	INFO	Listening on 127.0.0.1:47983
+1698216013198	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "39302" "--remote ... /localhost:39302/,http://[::1]:39302/" "-no-remote" "-profile" "C:\\Users\\USER\\AppData\\Local\\Temp\\rust_mozprofileiYX9za"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1698216014431	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1698216014539	Marionette	INFO	Listening on port 50241
+WebDriver BiDi listening on ws://127.0.0.1:39302
+Read port: 50241
+1698216015247	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:39302/devtools/browser/6e083604-a813-498d-ae41-1dd370027b58
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.error: ({})
+1698216025306	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:50282
+1698216025310	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1698216025317	Marionette	INFO	Stopped listening on port 50241
+Dynamically enable window occlusion 1
+]]></system-err>
+  </testcase>
+  <testcase name=" #10" classname="User should be able to fill and submit reservation form" time="13.42">
+    <system-out><![CDATA[
+@regression
+Scenario Outline:                                           &amp#27;[90m# src/test/resources/features/reservation.feature:41&amp#27;[0m
+THIS IS FROM @Before inside hooks class
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser at the online-reservation page&amp#27;[0m                 &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_at_the_online_reservation_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32muser enter all information and choose &amp#27;[0m&amp#27;[32m&amp#27;[1m"11"&amp#27;[0m&amp#27;[32m of people&amp#27;[0m &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationAndChooseOfPeople(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32muser should see correct quantity on the screen&amp#27;[0m       &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userShouldSeeCorrectQuantityOnTheScreen()&amp#27;[0m
+THIS IS FROM @After inside hooks class
+]]></system-out>
+    <system-err><![CDATA[[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 118)
+[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe
+1698216026759	geckodriver	INFO	Listening on 127.0.0.1:26727
+1698216026775	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "12213" "--remote ... /localhost:12213/,http://[::1]:12213/" "-no-remote" "-profile" "C:\\Users\\USER\\AppData\\Local\\Temp\\rust_mozprofilenfQpHZ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1698216027345	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1698216027482	Marionette	INFO	Listening on port 50287
+WebDriver BiDi listening on ws://127.0.0.1:12213
+Read port: 50287
+1698216027869	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:12213/devtools/browser/cf970df3-9c7d-44e2-b465-d60be311b4d8
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.error: ({})
+1698216038292	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:50328
+1698216038295	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1698216038302	Marionette	INFO	Stopped listening on port 50287
+Dynamically enable window occlusion 1
+]]></system-err>
+  </testcase>
+  <testcase name=" #11" classname="User should be able to fill and submit reservation form" time="13.504">
+    <error message="The element with the reference 92ba8ce6-75a9-46ca-938a-0adbed915325 is stale; either its node document is not the active document, or it is no longer connected to the DOM&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference&#10;Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;&#10;System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Command: [749bd451-19bb-4ec4-8493-4f7ce4c92325, clickElement {id=92ba8ce6-75a9-46ca-938a-0adbed915325}]&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:3973, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3304, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:3973/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Element: [[FirefoxDriver: firefox on WINDOWS (749bd451-19bb-4ec4-8493-4f7ce4c92325)] -&gt; xpath: //div[@class=&apos;xdsoft_time &apos;][2]]&#10;Session ID: 749bd451-19bb-4ec4-8493-4f7ce4c92325" type="org.openqa.selenium.StaleElementReferenceException"><![CDATA[org.openqa.selenium.StaleElementReferenceException: 
+The element with the reference 92ba8ce6-75a9-46ca-938a-0adbed915325 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [749bd451-19bb-4ec4-8493-4f7ce4c92325, clickElement {id=92ba8ce6-75a9-46ca-938a-0adbed915325}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:3973, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3304, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:3973/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (749bd451-19bb-4ec4-8493-4f7ce4c92325)] -> xpath: //div[@class='xdsoft_time '][2]]
+Session ID: 749bd451-19bb-4ec4-8493-4f7ce4c92325
+]]></error>
+    <system-out><![CDATA[
+@regression
+Scenario Outline:                                           &amp#27;[90m# src/test/resources/features/reservation.feature:42&amp#27;[0m
+THIS IS FROM @Before inside hooks class
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser at the online-reservation page&amp#27;[0m                 &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.user_at_the_online_reservation_page()&amp#27;[0m
+  &amp#27;[31mWhen &amp#27;[0m&amp#27;[31muser enter all information and choose &amp#27;[0m&amp#27;[31m&amp#27;[1m"12"&amp#27;[0m&amp#27;[31m of people&amp#27;[0m &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationAndChooseOfPeople(java.lang.String)&amp#27;[0m
+      &amp#27;[31morg.openqa.selenium.StaleElementReferenceException: The element with the reference 92ba8ce6-75a9-46ca-938a-0adbed915325 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [749bd451-19bb-4ec4-8493-4f7ce4c92325, clickElement {id=92ba8ce6-75a9-46ca-938a-0adbed915325}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:3973, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3304, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:3973/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (749bd451-19bb-4ec4-8493-4f7ce4c92325)] -> xpath: //div[@class='xdsoft_time '][2]]
+Session ID: 749bd451-19bb-4ec4-8493-4f7ce4c92325
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at sun.reflect.GeneratedMethodAccessor111.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy22.click(Unknown Source)
+	at com.noizyoysters.step_definition.ReservationStepDef.userEnterAllInformationAndChooseOfPeople(ReservationStepDef.java:119)
+	at вњЅ.user enter all information and choose "12" of people(file:///C:/Users/USER/WORKSPACE/NoizyOysters/src/test/resources/features/reservation.feature:28)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36muser should see correct quantity on the screen&amp#27;[0m       &amp#27;[90m# com.noizyoysters.step_definition.ReservationStepDef.userShouldSeeCorrectQuantityOnTheScreen()&amp#27;[0m
+
+    Embedding Attached img [image/png 75434 bytes]
+
+THIS IS FROM @After inside hooks class
+]]></system-out>
+    <system-err><![CDATA[[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.33.0 (resolved driver for Firefox 118)
+[pool-2-thread-5] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\USER\.cache\selenium\geckodriver\win64\0.33.0\geckodriver.exe
+1698216040187	geckodriver	INFO	Listening on 127.0.0.1:22057
+1698216040733	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "3973" "--remote- ... ://localhost:3973/,http://[::1]:3973/" "-no-remote" "-profile" "C:\\Users\\USER\\AppData\\Local\\Temp\\rust_mozprofilengBYiV"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1698216041235	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1698216041340	Marionette	INFO	Listening on port 50333
+WebDriver BiDi listening on ws://127.0.0.1:3973
+Read port: 50333
+1698216042017	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:3973/devtools/browser/9a4185e3-11d0-4d06-b9c8-a4b28f1b8ac4
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.error: ({})
+1698216051926	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:50374
+1698216051930	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1698216051931	Marionette	INFO	Stopped listening on port 50333
+Dynamically enable window occlusion 1
+]]></system-err>
+  </testcase>
+</testsuite>

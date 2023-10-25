@@ -89,13 +89,14 @@ public class ReservationStepDef {
     public void userEnterAllInformationExceptPhone() {
         reservationPage.name.sendKeys(faker.name().fullName());
         reservationPage.email.sendKeys(faker.animal().name() + "@gmail.com");
-        reservationPage.phone.click();
-        actions.sendKeys(Keys.PAGE_DOWN).pause(Duration.ofMillis(2000)).perform();
+        js.executeScript("window.scrollBy(0,500)");
+        wait.until(ExpectedConditions.visibilityOf(reservationPage.howManyPeople));
         Select select = new Select(reservationPage.howManyPeople);
         select.selectByVisibleText("2");
         Assert.assertEquals("2", select.getFirstSelectedOption().getText());
         reservationPage.dateTime.click();
         reservationPage.choosingDateTime.click();
+        wait.until(ExpectedConditions.visibilityOf(reservationPage.submitButton));
         reservationPage.submitButton.click();
     }
 

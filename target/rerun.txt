@@ -1,2 +1,1 @@
-file:src/test/resources/features/location.feature:17
-file:src/test/resources/features/reservation.feature:12
+file:src/test/resources/features/reservation.feature:22:33:42

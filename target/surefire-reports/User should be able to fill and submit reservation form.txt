@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: User should be able to fill and submit reservation form
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 348.508 s <<< FAILURE! - in User should be able to fill and submit reservation form
+User should be able to fill and submit reservation form.user enters all information except phone  Time elapsed: 41.156 s  <<< ERROR!
+org.openqa.selenium.StaleElementReferenceException: 
+The element with the reference 9ffb15b3-0557-4083-baa8-5389b35bf3c8 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [6df48dc7-b95e-4225-98ac-d178d194a43f, clickElement {id=9ffb15b3-0557-4083-baa8-5389b35bf3c8}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:24980, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 14688, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:24980/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (6df48dc7-b95e-4225-98ac-d178d194a43f)] -> xpath: //div[@class='xdsoft_time '][2]]
+Session ID: 6df48dc7-b95e-4225-98ac-d178d194a43f
+
+User should be able to fill and submit reservation form. #2  Time elapsed: 24.283 s  <<< ERROR!
+org.openqa.selenium.StaleElementReferenceException: 
+The element with the reference c06ba470-e43c-4a8b-9d78-e53a48407a16 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5d22062b-e937-424e-9537-75561141009d, clickElement {id=c06ba470-e43c-4a8b-9d78-e53a48407a16}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:9552, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 14048, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:9552/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (5d22062b-e937-424e-9537-75561141009d)] -> xpath: //div[@class='xdsoft_time '][2]]
+Session ID: 5d22062b-e937-424e-9537-75561141009d
+
+User should be able to fill and submit reservation form. #11  Time elapsed: 13.504 s  <<< ERROR!
+org.openqa.selenium.StaleElementReferenceException: 
+The element with the reference 92ba8ce6-75a9-46ca-938a-0adbed915325 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [749bd451-19bb-4ec4-8493-4f7ce4c92325, clickElement {id=92ba8ce6-75a9-46ca-938a-0adbed915325}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:3973, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 3304, moz:profile: C:\Users\USER\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:3973/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (749bd451-19bb-4ec4-8493-4f7ce4c92325)] -> xpath: //div[@class='xdsoft_time '][2]]
+Session ID: 749bd451-19bb-4ec4-8493-4f7ce4c92325
+
