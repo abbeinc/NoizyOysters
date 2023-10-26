@@ -16,9 +16,8 @@ public class Hooks {
 @Before("@regression")
 
 public void setupDriver(){
-    System.out.println("THIS IS FROM @Before inside hooks class");
-    // set up implicit wait
-    Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
+
+    //Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
     Driver.getDriver().manage().window().maximize();
     }
 @After("@regression") //it comes from import io.cucumber.java.After; (Make sure it is correct import)

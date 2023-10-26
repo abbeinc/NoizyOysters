@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: User at the main page should be able to see content and
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 303.535 s - in User at the main page should be able to see content and
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 183.944 s - in User at the main page should be able to see content and

@@ -1,5 +1,6 @@
 package com.noizyoysters.pages;
 
+import com.noizyoysters.utility.ConfigReader;
 import com.noizyoysters.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +12,7 @@ public class ReservationPage {
     }
 
     public static void goToReservationPage(){
-        Driver.getDriver().get("https://noizyoysters.com/online-reservation/");
+        Driver.getDriver().get((ConfigReader.read("noizyOysters_url"))+"online-reservation/");
     }
     @FindBy(xpath = "//span[@class='wpcf7-form-control-wrap']/input[@name='your-name']")
     public WebElement name;

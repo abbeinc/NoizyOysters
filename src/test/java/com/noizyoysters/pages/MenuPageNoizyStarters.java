@@ -1,5 +1,6 @@
 package com.noizyoysters.pages;
 
+import com.noizyoysters.utility.ConfigReader;
 import com.noizyoysters.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +13,7 @@ public class MenuPageNoizyStarters {
     }
 
     public static void goToMenu(){
-        Driver.getDriver().get("https://noizyoysters.com/menu/");
+        Driver.getDriver().get((ConfigReader.read("noizyOysters_url"))+"menu/");
     }
 
     @FindBy(xpath = "//img[@decoding='async'][contains(@src, 'Noizy-Oysters-logo.png' )]")

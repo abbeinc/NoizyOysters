@@ -1,5 +1,6 @@
 package com.noizyoysters.pages;
 
+import com.noizyoysters.utility.ConfigReader;
 import com.noizyoysters.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +11,7 @@ public class MainPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
     public static void goToMainPage (){
-        Driver.getDriver().get("https://noizyoysters.com/");
+        Driver.getDriver().get(ConfigReader.read("noizyOysters_url"));
     }
 
     @FindBy(xpath = "//li[@id='menu-item-274']/a[@href='https://noizyoysters.com/'][.='Home']")

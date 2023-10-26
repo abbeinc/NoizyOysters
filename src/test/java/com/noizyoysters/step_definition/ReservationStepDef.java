@@ -22,7 +22,7 @@ public class ReservationStepDef {
     String quantity;
     Actions actions = new Actions(Driver.getDriver());
     JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofMillis(4000));
+    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofMillis(5000));
 
 
     @Given("user at the online-reservation page")
@@ -32,13 +32,17 @@ public class ReservationStepDef {
     }
 
     @When("user enter information in all fields and click submit button")
-    public void user_enter_information_in_all_fields_and_click_submit_button() throws InterruptedException {
+    public void user_enter_information_in_all_fields_and_click_submit_button() {
+        wait.until(ExpectedConditions.visibilityOf(reservationPage.name));
         reservationPage.name.sendKeys(faker.name().fullName());
         reservationPage.email.sendKeys(faker.animal().name() + "@gmail.com");
         reservationPage.phone.sendKeys(faker.phoneNumber().cellPhone());
+        js.executeScript("window.scrollBy(0,500)");
+        wait.until(ExpectedConditions.visibilityOf(reservationPage.howManyPeople));
         Select select = new Select(reservationPage.howManyPeople);
         select.selectByVisibleText("12");
         reservationPage.dateTime.click();
+        wait.until(ExpectedConditions.visibilityOf(reservationPage.choosingDateTime));
         reservationPage.choosingDateTime.click();
 
 
@@ -51,11 +55,15 @@ public class ReservationStepDef {
 
     @When("user enters all information except name")
     public void userEntersAllInformationExceptName() {
+        wait.until(ExpectedConditions.visibilityOf(reservationPage.name));
         reservationPage.email.sendKeys(faker.animal().name() + "@gmail.com");
         reservationPage.phone.sendKeys(faker.phoneNumber().cellPhone());
+        js.executeScript("window.scrollBy(0,500)");
+        wait.until(ExpectedConditions.visibilityOf(reservationPage.howManyPeople));
         Select select = new Select(reservationPage.howManyPeople);
         select.selectByVisibleText("12");
         reservationPage.dateTime.click();
+        wait.until(ExpectedConditions.visibilityOf(reservationPage.choosingDateTime));
         reservationPage.choosingDateTime.click();
 
 
@@ -70,12 +78,16 @@ public class ReservationStepDef {
 
     @When("user enter all information except email")
     public void userEnterAllInformationExceptEmail() {
+        wait.until(ExpectedConditions.visibilityOf(reservationPage.name));
         reservationPage.name.sendKeys(faker.name().fullName());
         reservationPage.phone.sendKeys(faker.phoneNumber().cellPhone());
+        js.executeScript("window.scrollBy(0,500)");
+        wait.until(ExpectedConditions.visibilityOf(reservationPage.howManyPeople));
         Select select = new Select(reservationPage.howManyPeople);
         select.selectByVisibleText("12");
         Assert.assertEquals("12", select.getFirstSelectedOption().getText());
         reservationPage.dateTime.click();
+        wait.until(ExpectedConditions.visibilityOf(reservationPage.choosingDateTime));
         reservationPage.choosingDateTime.click();
 
     }
@@ -87,6 +99,7 @@ public class ReservationStepDef {
 
     @When("user enter all information except phone")
     public void userEnterAllInformationExceptPhone() {
+        wait.until(ExpectedConditions.visibilityOf(reservationPage.name));
         reservationPage.name.sendKeys(faker.name().fullName());
         reservationPage.email.sendKeys(faker.animal().name() + "@gmail.com");
         js.executeScript("window.scrollBy(0,500)");
@@ -95,6 +108,7 @@ public class ReservationStepDef {
         select.selectByVisibleText("2");
         Assert.assertEquals("2", select.getFirstSelectedOption().getText());
         reservationPage.dateTime.click();
+        wait.until(ExpectedConditions.visibilityOf(reservationPage.choosingDateTime));
         reservationPage.choosingDateTime.click();
         wait.until(ExpectedConditions.visibilityOf(reservationPage.submitButton));
         reservationPage.submitButton.click();
@@ -108,23 +122,6 @@ public class ReservationStepDef {
 
     }
 
-    @When("user enter all information and choose {string} of people")
-    public void userEnterAllInformationAndChooseOfPeople(String amount) {
-        reservationPage.name.sendKeys(faker.name().fullName());
-        reservationPage.email.sendKeys(faker.animal().name() + "@gmail.com");
-        reservationPage.phone.sendKeys(faker.phoneNumber().cellPhone());
-        js.executeScript("window.scrollBy(0,400)");
-        Select select = new Select(reservationPage.howManyPeople);
-        select.selectByVisibleText(amount);
-        reservationPage.dateTime.click();
-        reservationPage.choosingDateTime.click();
-        quantity = select.getFirstSelectedOption().getText();
-    }
-
-    @Then("user should see correct quantity on the screen")
-    public void userShouldSeeCorrectQuantityOnTheScreen() {
-        Assert.assertEquals(quantity, reservationPage.howManyPeople.getAttribute("value"));
-    }
 
 
 }

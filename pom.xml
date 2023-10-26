@@ -88,8 +88,8 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <runOrder>Alphabetical</runOrder>
                     <parallel>methods</parallel>
-                    <threadCount>4</threadCount>
-                    <useUnlimitedThreads>true</useUnlimitedThreads>
+                    <threadCount>2</threadCount>
+                    <useUnlimitedThreads>false</useUnlimitedThreads>
                     <includes>
                         <include>**/*TestRunner.java</include>
 

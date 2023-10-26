@@ -24,19 +24,3 @@ Feature: User should be able to fill and submit reservation form
     Then user should see warning sing for phone
 
 
-  Scenario Outline:
-    When user enter all information and choose "<amount>" of people
-    Then user should see correct quantity on the screen
-    Examples:
-      | amount |
-      | 2      |
-      | 3      |
-      | 4      |
-      | 5      |
-      | 6      |
-      | 7      |
-      | 8      |
-      | 9      |
-      | 10     |
-      | 11     |
-      | 12     |

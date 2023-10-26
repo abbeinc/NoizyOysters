@@ -7,7 +7,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -15,10 +18,13 @@ import java.util.Map;
 public class DrinksMenuStepDef {
     DrinksMenuPage drinksMenuPage = new DrinksMenuPage();
     JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+    WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofMillis(5000));
     @Given("user at the drinks menu page")
     public void user_at_the_drinks_menu_page() {
+        String title = "Bar Menu – Noizy Oysters Bar & Grill";
         DrinksMenuPage.goToDrinksMenuPage();
-        Assert.assertEquals("Bar Menu – Noizy Oysters Bar & Grill", Driver.getDriver().getTitle());
+        wait.until(ExpectedConditions.titleIs(title));
+        Assert.assertEquals(title, Driver.getDriver().getTitle());
     }
     @When("user scroll down to the Noizy Favorites")
     public void user_scroll_down_to_the_noizy_favorites() {
@@ -27,7 +33,7 @@ public class DrinksMenuStepDef {
     }
     @Then("user should see")
     public void user_should_see(Map<String, String> mp) {
-
+        wait.until(ExpectedConditions.visibilityOf(drinksMenuPage.oysterShooterPrice));
         String oysterShooterPrice = drinksMenuPage.oysterShooterPrice.getText();
         oysterShooterPrice=oysterShooterPrice.substring(oysterShooterPrice.indexOf("$"));
         String noizyMargaritaPrice = drinksMenuPage.noizyMargaritaPrice.getText();

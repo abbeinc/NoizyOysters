@@ -1,5 +1,6 @@
 package com.noizyoysters.pages;
 
+import com.noizyoysters.utility.ConfigReader;
 import com.noizyoysters.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +11,7 @@ public class DrinksMenuPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
     public static void goToDrinksMenuPage(){
-        Driver.getDriver().get("https://noizyoysters.com/drinks-cocktails/");
+        Driver.getDriver().get((ConfigReader.read("noizyOysters_url"))+"drinks-cocktails/");
     }
 
     @FindBy(xpath = "//p/strong[.='Oyster Shooter']")
